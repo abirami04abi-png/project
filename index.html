@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="controls">
+      <label class="btn" for="fileInput">Add images</label>
+      <input id="fileInput" type="file" accept="image/*" multiple />
+      <button id="clearBtn" class="btn">Clear</button>
+      <div style="flex:1"></div>
+      <div class="row">
+        <label class="label">Autoplay</label>
+        <input id="autoplay" type="checkbox" />
+      </div>
+      <div class="row">
+        <label class="label">Speed (ms)</label>
+        <input id="speed" type="number" min="100" value="3000" />
+      </div>
+    </div>
+
+    <div class="slider-wrap" id="sliderWrap">
+      <div class="slides" id="slides">
+        <div class="slide empty" id="emptyState">No images added — click "Add images" to start</div>
+      </div>
+      <div class="nav">
+        <div class="control prev" id="prevBtn"><button>❮</button></div>
+        <div class="control next" id="nextBtn"><button>❯</button></div>
+      </div>
+    </div>
+
+    <div class="dots" id="dots"></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="footer-text">Tip: Use left/right arrow keys or swipe on touchscreens.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
